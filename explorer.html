@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5a3fc0">
+  <title>Readify | Book Explorer</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/explorer.css">
+</head>
+<body>
+
+<header id="main-header">
+  <nav class="navbar">
+    <img src="images/logo.png" alt="Readify Logo" class="logo" width="60" height="60" loading="eager" fetchpriority="high">
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="explorer.html">Books</a></li>
+      <li><a href="tracker.html">Reading Tracker</a></li>
+      <li><a href="recommendations.html">Recommendations</a></li>
+      <li><a href="flow.html">Reading Flow</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+
+    <div class="hamburger" role="button" aria-label="Toggle navigation">&#9776;</div>
+  </nav>
+</header>
+
+<!-- main content -->
+<main class="page-content">
+
+  <h1>Book Explorer</h1>
+  <p>Discover books by genre, author, or popularity.</p>
+
+  <!-- search and filter  -->
+  <div class="controls">
+    <input 
+      type="text" 
+      id="search-input" 
+      placeholder="Search by title or author..." 
+      class="search-box"
+      aria-label="Search books by title or author"
+    >
+
+    <select id="genre-filter" class="filter-select" aria-label="Filter by genre">
+      <option value="All">All Genres</option>
+      <option value="Science Fiction">Science Fiction</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Thriller">Thriller</option>
+    </select>
+
+    <button class="sort-btn" onclick="sortByRating()" aria-label="Sort books by rating">
+      Sort by Rating
+    </button>
+  </div>
+
+  <!--  Book Cards  -->
+  <section id="book-grid" aria-label="Book listings">
+  
+  </section>
+
+</main>
+
+ <!--              Footer            -->
+
+<footer>
+  <div class="footer-content">
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="explorer.html">Books</a>
+      <a href="tracker.html">Tracker</a>
+      <a href="recommendations.html">Recommendations</a>
+      <a href="flow.html">Reading Flow</a>
+      <a href="feedback.html">Feedback</a>
+    </div>
+
+    <form id="newsletter-form">
+      <input type="email" id="newsletter-email" placeholder="Enter your email" autocomplete="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p class="footer-text">&copy; 2026 Readify. Fall in Love With Reading.</p>
+  </div>
+</footer>
+
+<!--   JS file    -->
+<script defer src="js/explorer.js"></script>
+
+
+</body>
+</html>

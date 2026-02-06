@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5a3fc0">
+  <title>Readify | Reading Flow</title>
+
+  <link rel="stylesheet" href="css/flow.css">
+</head>
+
+<body>
+
+<!--            Navbar           -->
+
+<header id="main-header">
+  <nav class="navbar">
+    <img src="images/logo.png" alt="" class="logo" width="60" height="60" loading="eager" fetchpriority="high">
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="explorer.html">Books</a></li>
+      <li><a href="tracker.html">Reading Tracker</a></li>
+      <li><a href="recommendations.html">Recommendations</a></li>
+      <li><a href="flow.html">Reading Flow</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+
+    <div class="hamburger" role="button" aria-label="Toggle navigation">&#9776;</div>
+  </nav>
+</header>
+
+<main class="page-content">
+  <h1>Reading Flow</h1>
+  <p>Relax with cozy sounds and track completed books.</p>
+
+  <div class="flow-container">
+
+    <!-- Cozy Sound -->
+    <div class="box">
+      <h2>Cozy Sounds</h2>
+      <button id="playBtn">Play</button>
+      <button id="stopBtn">Stop</button>
+
+      <audio id="cozyAudio" loop aria-label="Cozy ambient sounds for reading">
+        <source src="audio/cozy tarck.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Completed Books -->
+    <div class="box">
+      <h2>Completed Books</h2>
+      <input type="text" id="bookTitle" placeholder="Book title" aria-label="Enter the title of a completed book">
+      <button id="addBook">Add</button>
+      <ul id="bookList"></ul>
+    </div>
+
+  </div>
+</main>
+
+ <!--     Footer      -->
+
+<footer>
+  <div class="footer-content">
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="explorer.html">Books</a>
+      <a href="tracker.html">Tracker</a>
+      <a href="recommendations.html">Recommendations</a>
+      <a href="flow.html">Reading Flow</a>
+      <a href="feedback.html">Feedback</a>
+    </div>
+
+    <form id="newsletter-form">
+      <input type="email" id="newsletter-email" placeholder="Enter your email" autocomplete="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p class="footer-text">&copy; 2026 Readify. Fall in Love With Reading.</p>
+  </div>
+</footer>
+
+<script defer src="js/flow.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5a3fc0">
+  <title>Readify | Book Recommendations</title>
+
+
+  <link rel="stylesheet" href="css/recommender.css">
+</head>
+
+<body>
+
+<header id="main-header">
+  <nav class="navbar">
+    <img src="images/logo.png" alt="Readify Logo" class="logo" width="60" height="60" loading="eager" fetchpriority="high">
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="explorer.html">Books</a></li>
+      <li><a href="tracker.html">Reading Tracker</a></li>
+      <li><a href="recommendations.html">Recommendations</a></li>
+      <li><a href="flow.html">Reading Flow</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+
+    <div class="hamburger" role="button" aria-label="Toggle navigation">&#9776;</div>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="page-content">
+
+  <h1>Book Recommender</h1>
+  <p>Get random book recommendations based on your preferences.</p>
+
+  <!-- FILTERS SECTION -->
+  <div class="recommender-container">
+    <div class="filters-section">
+      <h2>Select Preferences</h2>
+      
+      <label for="genre-select">Genre:</label>
+      <select id="genre-select">
+          <option value="all">All Genres</option>
+          <option value="fiction">Fiction</option>
+          <option value="fantasy">Fantasy</option>
+      </select>
+
+      <label for="length-select">Length:</label>
+      <select id="length-select">
+          <option value="all">All Lengths</option>
+          <option value="short">Short</option>
+          <option value="long">Long</option>
+      </select>
+
+
+      <button id="pick-btn" class="pick-btn">Pick a Book</button>
+    </div>
+
+    <!-- RECOMMENDATION SECTION -->
+    <div class="recommendation-section">
+      <h2>Your Recommendation</h2>
+      <div id="recommendation-card" class="recommendation-card hidden">
+        <p class="rec-info"><strong>Genre:</strong> <span id="rec-genre"></span></p>
+        <p class="rec-info"><strong>Pages:</strong> <span id="rec-pages"></span></p>
+        <p class="rec-desc" id="rec-desc"></p>
+        
+        <div class="rec-actions">
+          <button id="save-btn" class="btn-save">Save to Reading List</button>
+          <button id="pick-again-btn" class="btn-pick-again">Pick Again</button>
+        </div>
+      </div>
+      <div id="empty-msg" class="empty-msg">Click "Pick a Book" to get started!</div>
+    </div>
+  </div>
+
+  <!-- SAVED READING LIST -->
+  <div class="reading-list-section">
+    <h2>Saved Recommendations</h2>
+    <div id="saved-books" class="saved-books-grid"></div>
+    <div id="no-saved" class="empty-msg">No saved recommendations yet.</div>
+  </div>
+
+</main>
+
+ <!--              Footer            -->
+
+<footer>
+  <div class="footer-content">
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="explorer.html">Books</a>
+      <a href="tracker.html">Tracker</a>
+      <a href="recommendations.html">Recommendations</a>
+      <a href="flow.html">Reading Flow</a>
+      <a href="feedback.html">Feedback</a>
+    </div>
+
+    <form id="newsletter-form">
+      <input type="email" id="newsletter-email" placeholder="Enter your email" autocomplete="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p class="footer-text">&copy; 2026 Readify. Fall in Love With Reading.</p>
+  </div>
+</footer>
+
+<script defer src="js/recommender.js"></script>
+
+</body>
+</html>

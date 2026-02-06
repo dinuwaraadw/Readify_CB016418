@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  font-family: "Readify-Regular";
+  background: #c8e4ff;
+  background-image: url(../images/book\ background.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.logo {
+  width: 100px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.2s;
+  font-family: "Readify-Regular";
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: #2563eb;
+  transition: width 0.2s;
+}
+
+
+
+.nav-links a.active {
+  color: #2563eb;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.nav-links.show {
+  display: flex !important;
+}
+  
+  /*  navbar    */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0,0,0,1);
+}
+
+
+/* page */
+.page-content{
+  padding:40px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.page-content h1{
+  font-size:40px;
+  color:#000000;
+  margin-bottom:10px
+}
+
+.page-content>p{
+  color:#000000;
+  margin-bottom:30px
+}
+
+h2{
+  color:#000000;
+  font-size:18px;
+  margin-bottom:15px;
+  border-bottom:2px solid #2563eb;
+  padding-bottom:8px
+}
+
+.controls{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.search-box,
+.filter-select{
+  padding:10px;
+  border:2px solid #2563eb;
+  border-radius:5px;
+}
+
+.sort-btn{
+  padding:10px 20px;
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* book grid */
+#book-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  display:flex;
+  flex-direction:column;
+  min-height:300px;
+}
+
+.book-placeholder{
+  height:150px;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:34px;
+  font-weight:bold;
+}
+
+/* book modal */
+.bookmodal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+}
+
+.bookmodal-content{
+  background:#fff;
+  margin:50px auto;
+  padding:10px;
+  max-width:600px;
+  border-radius:10px;
+}
+
+.book-cover{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+
+.close{
+  float:right;
+  font-size:25px;
+  cursor:pointer;
+}
+
+
+/*  footer   */
+footer {
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  text-align: center;
+  border-top-style: solid;
+  border-color: #1e40af;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #2563eb;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #000000;
+}
+
+footer form {
+  margin-top: 10px;
+}
+
+footer input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid #2563eb;
+}
+
+footer button {
+  padding: 8px 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background: #1e40af;
+}
+
+.footer-text {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* responcive */
+@media (max-width: 480px){
+  .nav-links { display: none; gap: 8px; font-size: 11px; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: rgba(255,255,255,0.95); padding: 10px; }
+  .hamburger { display: block; }
+  .page-content { padding: 12px 10px; }
+  .page-content h1 { font-size: 1.5rem; }
+  .page-content > p { font-size: 0.9rem; }
+  .controls { flex-direction: column; gap: 10px; }
+  .search-box, .filter-select, .sort-btn { width: 100%; }
+  .card { padding: 10px; }
+  .book-placeholder { height: 120px; font-size: 28px; }
+  .logo { width: 50px; height: 25px; margin-left: 10px; }
+}
+
+
